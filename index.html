@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roy Brinkmann – schafft erneut die Null</title>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2163856');
+  </script>
+  <!-- End MailerLite Universal -->
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #F2F3F8;
+      color: #2c2c3a;
+    }
+
+    /* ─── LAYER 1: LANDING PAGE ─── */
+    #layer1 {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #F2F3F8 0%, #EDEEF5 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #layer1 img.logo {
+      width: min(320px, 70vw);
+      margin-bottom: 60px;
+    }
+
+    #layer1 a.enter-link {
+      font-size: 1.3rem;
+      color: #8B8EC9;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.3s ease;
+    }
+
+    #layer1 a.enter-link::after {
+      content: ' →';
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #layer1 a.enter-link:hover { color: #5a5e9e; }
+    #layer1 a.enter-link:hover::after { opacity: 1; }
+
+    /* ─── LAYER 2: INFO PAGE ─── */
+    #layer2 {
+      background: linear-gradient(160deg, #F2F3F8 0%, #EDEEF5 100%);
+      min-height: 100vh;
+    }
+
+    .header-wrap {
+      position: relative;
+      height: 420px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-watermark {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-watermark img {
+      width: min(340px, 60vw);
+      opacity: 0.18;
+      filter: grayscale(30%);
+    }
+
+    .header-title {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header-title h1 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      color: #3a3a5c;
+      font-weight: normal;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+    }
+
+    .header-title p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #8B8EC9;
+      letter-spacing: 0.08em;
+    }
+
+    .welcome-text {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 50px 30px 30px;
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: #3a3a5c;
+      text-align: center;
+    }
+
+    .accordion-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 10px 20px 40px;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #d0d2e8;
+      margin-bottom: 2px;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #3a3a5c;
+      user-select: none;
+      transition: color 0.2s;
+    }
+
+    .accordion-header:hover { color: #8B8EC9; }
+
+    .accordion-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+      color: #8B8EC9;
+    }
+
+    .accordion-body {
+      display: none;
+      padding: 6px 6px 20px;
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: #444460;
+      white-space: pre-line;
+    }
+
+    .accordion-item.open .accordion-body { display: block; }
+    .accordion-item.open .accordion-icon { transform: rotate(180deg); }
+
+    /* MailerLite Override – passend zum Website-Design */
+    .accordion-body .ml-embedded {
+      white-space: normal;
+      margin-top: 16px;
+    }
+
+    /* Anchor bar */
+    .anchor-bar {
+      position: sticky;
+      bottom: 0;
+      background: rgba(237, 238, 245, 0.95);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid #d0d2e8;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 16px 20px;
+      z-index: 100;
+    }
+
+    .anchor-bar a {
+      color: #8B8EC9;
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+
+    .anchor-bar a:hover { color: #5a5e9e; }
+
+    /* ─── IMPRESSUM ─── */
+    #impressum {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 30px;
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: #3a3a5c;
+    }
+
+    #impressum h2 {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+      color: #8B8EC9;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      padding: 30px;
+      color: #8B8EC9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover { color: #5a5e9e; }
+
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════ -->
+<!--           LAYER 1: LANDING PAGE        -->
+<!-- ══════════════════════════════════════ -->
+<section id="layer1">
+  <img class="logo" src="logo.jpg" alt="Roy Brinkmann – schafft erneut die Null" />
+  <a class="enter-link" href="#layer2">Du bist dabei&nbsp;–&nbsp;wenn du möchtest.</a>
+</section>
+
+
+<!-- ══════════════════════════════════════ -->
+<!--           LAYER 2: INFO PAGE           -->
+<!-- ══════════════════════════════════════ -->
+<section id="layer2">
+
+  <div class="header-wrap" id="headerWrap">
+    <div class="header-watermark" id="headerWatermark">
+      <img src="logo.jpg" alt="" />
+    </div>
+    <div class="header-title">
+      <h1>Roy Brinkmann<br>schafft erneut die Null.</h1>
+      <p>19. Juni 2027 · Kulturpalast Hamburg</p>
+    </div>
+  </div>
+
+  <div class="welcome-text">
+    Schön, dass du da bist. Dieser Abend ist für alle, die Roy auf seinem Weg begleitet haben – und die mit ihm feiern, dass er erneut die Null geschafft hat. Ein Konzert, ein Wiedersehen, ein Abend, den wir so schnell nicht vergessen werden. Alle Infos findest du hier. Und wenn du möchtest: Mach einfach mit.
+  </div>
+
+  <div class="accordion-wrap">
+
+    <!-- 1. Wann, Wo & Dresscode (offen) -->
+    <div class="accordion-item open">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        📌 Wann, Wo &amp; Dresscode
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">🎉 Roy Brinkmann schafft erneut die Null.
+
+📅 Freitag, 19. Juni 2027
+⏰ Einlass: 18:00 Uhr | Konzertbeginn: 18:30 Uhr | Afterglow: Open End
+📍 Kulturpalast Hamburg, Billstedter Marktplatz 1, 22111 Hamburg
+🚇 U-Bahn U2 – direkt vor der Tür
+
+👗 Dresscode: Komm so, wie du dich wohlfühlst.</div>
+    </div>
+
+    <!-- 2. Programm & Ablauf -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🎭 Programm &amp; Ablauf
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">18:00  Einlass &amp; Empfang – ankommen, wiedersehen, genießen
+18:30  Konzertbeginn
+       Die Bühne gehört Roy – und vielleicht auch dir?
+19:45  Pause – Zeit für Getränke, Gespräche &amp; einen Blick
+       in den Hamburger Abendhimmel 🌇
+       (Sonnenuntergang an diesem Tag: ca. 21:52 Uhr)
+20:15  Zweiter Teil – weiter geht's!
+21:30  Afterglow – geselliges Zusammensein direkt vor Ort,
+       bei guter Musik, kühlen Getränken &amp; warmen Momenten.
+       Open End. Wir bleiben, solange ihr bleibt. 🥂</div>
+    </div>
+
+    <!-- 3. Mitmachen -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🎤 Mitmachen
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">Hast du Lust, diesen Abend aktiv mitzugestalten?
+Wir freuen uns über alle, die mitmachen möchten – Familie hat Vorrang!
+
+Bitte überlege schon jetzt, ob und wie du mitwirken möchtest.
+Bei der Anmeldung wirst du danach gefragt.
+
+🎬 ON STAGE
+• Gruppenchoreo – Tanz
+• Background – Tanz
+• Instrumentalsolo – Klavier oder Saxophon
+• HipHop-Gruppe
+• Paartanz
+• Stagehand (Bühnenarbeiter)
+
+🛠️ BACKSTAGE
+Technik:    Bühnentechnik | Lichttechnik | Pyrotechnik | Technikläufer
+Kreatives:  Kostümdesign | Make-up | Videoerstellung (KI)
+Service:    Barkeeper | Gästebetreuung | Garderobe | Backstage-Koordination
+            Notfall-Koordinator (Ersthelfer) | DJ Afterparty
+Handwerk:   Bühnenbau</div>
+    </div>
+
+    <!-- 4. Warnhinweise -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        ⚠️ Warnhinweise
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">❗ Bitte beachte: ❗
+
+Dieser Abend beinhaltet teilweise hohe Lautstärke,
+Lichteffekte und ggf. Pyrotechnik.
+
+Wir empfehlen Gehörschutz für Kinder und weisen Personen
+mit Lichtempfindlichkeit auf mögliche Stroboskop-Effekte hin.</div>
+    </div>
+
+    <!-- 5. Mitbringen -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🎒 Mitbringen
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">Damit der Abend für alle perfekt wird:
+
+👂 Gehörschutz für Kinder (empfohlen)
+👟 Bequeme Schuhe – es wird getanzt!
+📷 Kamera oder geladenes Handy – für unvergessliche Erinnerungen
+💃 Deine beste Laune
+🎁 Optional: eine kleine Überraschung für den Jubilar
+☔ Wetterfeste Jacke für den Afterglow (Juni kann abends frisch sein)</div>
+    </div>
+
+    <!-- 6. Anreise & Parken -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🚗 Anreise &amp; Parken
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">🚇 Mit der U-Bahn (empfohlen):
+   U2, Haltestelle Billstedt – direkt am Kulturpalast.
+   Aus Richtung Innenstadt: ca. 15 Min. vom Hauptbahnhof.
+
+🚗 Mit dem Auto:
+   Wir raten von der Anfahrt mit dem Auto ab –
+   Parkplätze in unmittelbarer Nähe sind sehr begrenzt.
+
+   Besser: Park &amp; Ride nutzen!
+   🅿️ P+R Steinfurther Allee (U2) – Möllner Landstraße 222,
+      22117 Hamburg | 345 Stellplätze | 16 Min. zum HBF
+   🅿️ P+R Horner Rennbahn (U2/U4) – Hermannstal 24,
+      22111 Hamburg | 84 Stellplätze | 9 Min. zum HBF
+
+   ⚠️ Hinweis Billstedt Center Parkhaus:
+      Schließt um 20:30 Uhr – bitte nicht nutzen!
+
+🚲 Mit dem Fahrrad:
+   Stellplätze direkt am Eingang.
+
+<a href="https://maps.google.com/?q=Kulturpalast+Hamburg,+Billstedter+Marktplatz+1,+22111+Hamburg" target="_blank" style="color:#8B8EC9;">📍 Google Maps öffnen →</a></div>
+    </div>
+
+    <!-- 7. Übernachten -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🏨 Übernachten
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">Du reist von weiter her an? Kein Problem!
+
+Für Gäste mit längerer Anreise bieten wir an, gemeinsam eine
+Gruppenunterkunft in der Nähe zu buchen. Wer Interesse hat,
+gibt dies einfach bei der Anmeldung an – nach Anmeldeschluss
+kümmern wir uns um eine geeignete Unterkunft für alle.
+
+Und das Beste: Wer möchte, kann gleich das ganze Wochenende
+daraus machen:
+
+🔥 Freitagabend (vor dem Konzert): Gemeinsamer Grillabend
+🌍 Samstag: Kleines Ausflugsprogramm für Groß und Klein
+
+Interesse? Einfach bei der Anmeldung vermerken!</div>
+    </div>
+
+    <!-- 8. Update-Service mit MailerLite -->
+    <div class="accordion-item" id="update-service-anchor">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🔔 Update-Service
+        <span class="accordion-icon">▾</span>
+      </div>
+      <div class="accordion-body">
+        <span>🔔 Bleib auf dem Laufenden! Melde dich an und wir informieren dich über Programm-Updates, Dresscode-Infos und alles, was du wissen musst.</span>
+        <!-- MailerLite Embedded Form -->
+        <div class="ml-embedded" data-form="iOuehf"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Anker-Leiste -->
+  <div class="anchor-bar">
+    <a href="https://form.jotform.com/260633285960057" target="_blank">Jetzt Anmelden</a>
+    <a href="#impressum">Impressum</a>
+    <a href="#update-service-anchor" onclick="openAccordion('update-service-anchor')">Update Service</a>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════ -->
+<!--           IMPRESSUM                    -->
+<!-- ══════════════════════════════════════ -->
+<section id="impressum">
+  <h2>Impressum</h2>
+  <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+  <br>
+  <p><strong>Roy Brinkmann</strong><br>
+  Marienthaler Straße 9b<br>
+  20535 Hamburg</p>
+  <br>
+  <p><strong>Kontakt:</strong><br>
+  E-Mail: <a href="mailto:roys_konzert_2027@gmx.de" style="color:#8B8EC9;">roys_konzert_2027@gmx.de</a></p>
+  <br>
+  <p><em>Hinweis: Diese Website dient ausschließlich der Organisation einer privaten Veranstaltung und verfolgt keine kommerziellen Zwecke.</em></p>
+  <a class="back-link" href="#layer2">↑ Zurück</a>
+</section>
+
+
+<script>
+  function toggleAccordion(header) {
+    header.parentElement.classList.toggle('open');
+  }
+
+  function openAccordion(id) {
+    const item = document.getElementById(id);
+    if (item) item.classList.add('open');
+  }
+
+  // Wasserzeichen-Scroll-Effekt
+  const watermark = document.getElementById('headerWatermark');
+  window.addEventListener('scroll', () => {
+    const layer2Top = document.getElementById('layer2').offsetTop;
+    const scrolled = window.scrollY - layer2Top;
+    const opacity = Math.max(0, 0.18 - scrolled / 300);
+    if (watermark) watermark.style.opacity = opacity;
+  });
+</script>
+
+</body>
+</html>
