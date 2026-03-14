@@ -171,29 +171,43 @@
     }
 
     /* Anchor bar */
-    .anchor-bar {
-      position: sticky;
-      bottom: 0;
-      background: rgba(237, 238, 245, 0.95);
-      backdrop-filter: blur(8px);
-      border-top: 1px solid #d0d2e8;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 16px 20px;
-      z-index: 100;
-    }
+.anchor-bar {
+  position: sticky;
+  bottom: 0;
+  background: rgba(237, 238, 245, 0.95);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid #d0d2e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px 16px 20px;
+  z-index: 100;
+}
 
-    .anchor-bar a {
-      color: #8B8EC9;
-      text-decoration: none;
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-      transition: color 0.2s;
-    }
+.anchor-hint {
+  font-size: 0.8rem;
+  color: #8B8EC9;
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
 
-    .anchor-bar a:hover { color: #5a5e9e; }
+.anchor-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
 
+.anchor-bar a {
+  color: #8B8EC9;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.anchor-bar a:hover { color: #5a5e9e; }
     /* ─── IMPRESSUM ─── */
     #impressum {
       max-width: 720px;
@@ -426,10 +440,11 @@ Interesse? Einfach bei der Anmeldung vermerken!</div>
 
   <!-- Anker-Leiste -->
   <div class="anchor-bar">
-    <span class="anchor-hint">Bitte um Rückmeldung bis 30.06.:</span>
-<a href="https://form.jotform.com/260633285960057" target="_blank">Jetzt Anmelden</a>
-    <a href="#impressum">Impressum</a>
-    <a href="#update-service-anchor" onclick="openAccordion('update-service-anchor')">Update Service</a>
+    <div class="anchor-hint">Bitte um Rückmeldung bis 30.06.</div>
+    <div class="anchor-buttons">
+      <a href="https://form.jotform.com/260633285960057" target="_blank">Jetzt Anmelden</a>
+      <a href="#impressum">Impressum</a>
+      <a href="#update-service-anchor" onclick="openAccordion('update-service-anchor')">Update Service</a>
   </div>
 
 </section>
